@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Leaf, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Shield, 
-  Truck, 
+import {
+  Leaf,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Shield,
+  Truck,
   Award,
   ArrowUp,
   Facebook,
@@ -61,8 +61,8 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { 
-    opacity: 0, 
+  hidden: {
+    opacity: 0,
     y: 50,
     scale: 0.95
   },
@@ -78,11 +78,11 @@ const itemVariants = {
 };
 
 const cardHoverVariants = {
-  initial: { 
+  initial: {
     scale: 1,
     y: 0
   },
-  hover: { 
+  hover: {
     scale: 1.05,
     y: -5,
     transition: {
@@ -107,7 +107,7 @@ export default function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-  
+
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -141,10 +141,10 @@ export default function Footer() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-yellow/5 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-yellow/10 rounded-full blur-3xl"></div>
-        
+
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-10 bg-[linear-gradient(rgba(254,252,232,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(254,252,232,0.1)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-        
+
         {/* Floating Elements */}
         <motion.div
           variants={floatingVariants}
@@ -228,7 +228,7 @@ export default function Footer() {
                   <p className="text-yellow text-sm font-semibold">GLOBAL EXPORTS</p>
                 </div>
               </motion.div>
-              
+
               <p className="text-cream/80 leading-relaxed mb-6">
                 Premium banana powder manufacturer and exporter, serving global markets with the highest quality standards and certified excellence.
               </p>
@@ -263,7 +263,7 @@ export default function Footer() {
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <a 
+                    <a
                       href={link.href}
                       className="text-cream/80 hover:text-yellow transition-all duration-300 flex items-center gap-2 group"
                     >
@@ -282,28 +282,28 @@ export default function Footer() {
                 Contact Info
               </h3>
               <ul className="space-y-4">
-                <motion.li 
+                <motion.li
                   className="flex items-start gap-3 group"
                   whileHover={{ x: 5 }}
                 >
                   <MapPin className="w-5 h-5 text-yellow flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-cream/80">Export Processing Zone, Industrial Area, India 560001</span>
                 </motion.li>
-                <motion.li 
+                <motion.li
                   className="flex items-center gap-3 group"
                   whileHover={{ x: 5 }}
                 >
                   <Phone className="w-5 h-5 text-yellow group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-cream/80">+91 98765 43210</span>
                 </motion.li>
-                <motion.li 
+                <motion.li
                   className="flex items-center gap-3 group"
                   whileHover={{ x: 5 }}
                 >
                   <Mail className="w-5 h-5 text-yellow group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-cream/80">exports@bananamilk.com</span>
                 </motion.li>
-                <motion.li 
+                <motion.li
                   className="flex items-center gap-3 group"
                   whileHover={{ x: 5 }}
                 >
@@ -322,7 +322,7 @@ export default function Footer() {
               <p className="text-cream/80 mb-4">
                 Subscribe for export insights and product updates
               </p>
-              
+
               <AnimatePresence>
                 {isSubscribed ? (
                   <motion.div
@@ -394,26 +394,27 @@ export default function Footer() {
           >
             <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
               <p className="text-cream/60 text-center lg:text-left">
-                © 2024 Banana Gold Exports. All rights reserved. | Premium Banana Powder Manufacturer & Global Exporter
+                © {new Date().getFullYear()} Banana Gold Exports. All rights reserved. | Premium Banana Powder Manufacturer & Global Exporter
               </p>
-              
+
+
               <div className="flex items-center gap-6 text-sm text-cream/60">
-                <motion.a 
-                  href="#" 
+                <motion.a
+                  href="#"
                   whileHover={{ color: '#fefce8' }}
                   className="hover:text-yellow transition-colors duration-300"
                 >
                   Privacy Policy
                 </motion.a>
-                <motion.a 
-                  href="#" 
+                <motion.a
+                  href="#"
                   whileHover={{ color: '#fefce8' }}
                   className="hover:text-yellow transition-colors duration-300"
                 >
                   Terms of Service
                 </motion.a>
-                <motion.a 
-                  href="#" 
+                <motion.a
+                  href="#"
                   whileHover={{ color: '#fefce8' }}
                   className="hover:text-yellow transition-colors duration-300"
                 >
@@ -421,13 +422,13 @@ export default function Footer() {
                 </motion.a>
               </div>
             </div>
-             <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
+            <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
               <a href='https://mediaweb6.com/' target='_blank' className="text-blue-50 text-center lg:text-center">
-                
+
                 Powered By @ Media Web6
               </a>
-              
-             
+
+
             </div>
           </motion.div>
         </div>
