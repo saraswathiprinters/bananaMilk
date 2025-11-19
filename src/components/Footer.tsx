@@ -223,7 +223,7 @@ export default function Footer() {
                 </motion.div>
                 <div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-yellow to-yellow/80 bg-clip-text text-transparent">
-                    BANANA GOLD
+                    BANANA MILK
                   </h3>
                   <p className="text-yellow text-sm font-semibold">GLOBAL EXPORTS</p>
                 </div>
@@ -394,7 +394,7 @@ export default function Footer() {
           >
             <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
               <p className="text-cream/60 text-center lg:text-left">
-                © {new Date().getFullYear()} Banana Gold Exports. All rights reserved. | Premium Banana Powder Manufacturer & Global Exporter
+                © {new Date().getFullYear()} Banana MILK Exports. All rights reserved. | Premium Banana Powder Manufacturer & Global Exporter
               </p>
 
 
